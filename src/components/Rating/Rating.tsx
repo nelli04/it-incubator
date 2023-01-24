@@ -1,5 +1,9 @@
 import React from 'react';
 
+type RatingPropsType = {
+  value: 0 | 1 | 2 | 3 | 4 | 5;
+}
+
 function Star(props: any) {
   console.log('Star rendering')
   if (props.selected === true) {
@@ -9,7 +13,7 @@ function Star(props: any) {
   }
 }
 
-function Rating(props: any) {
+function Rating(props: RatingPropsType) {
   
   if (props.value === 1) {
     return (
