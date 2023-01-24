@@ -46,11 +46,11 @@ function AccordionTitle() {
 function AccordionBody() {
   console.log('AccordionBody rendering')
   return (
-    <div>
+    <>
     <li>1</li>
     <li>2</li>
     <li>3</li>
-    </div>
+    </>
   )
 }
 
