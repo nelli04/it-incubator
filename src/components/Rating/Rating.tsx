@@ -1,16 +1,20 @@
 import React from 'react';
 
-type RatingPropsType = {
-  value: 0 | 1 | 2 | 3 | 4 | 5;
+type StarPropsType = {
+  selected: boolean;
 }
 
-function Star(props: any) {
+function Star(props: StarPropsType) {
   console.log('Star rendering')
   if (props.selected === true) {
     return <span><b>star-</b></span>
   } else {
     return <span>star-</span>
   }
+}
+
+type RatingPropsType = {
+  value: 0 | 1 | 2 | 3 | 4 | 5;
 }
 
 function Rating(props: RatingPropsType) {
