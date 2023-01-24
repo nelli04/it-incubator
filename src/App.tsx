@@ -8,6 +8,7 @@ function App() {
     <div>
     <Accordion/>
     <Rating />
+    <Rating />
     </div>
   );
 }
