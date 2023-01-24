@@ -4,13 +4,14 @@ import Accordion from './components/Accordion/Accordion';
 import Rating from './components/Rating/Rating';
 
 function App() {
+  debugger;
   return (
     <div>
     <PageTitle title = {'MyFriends'} />
     <PageTitle title = {'TITLE'} />
-    <Accordion title = {true}/>
+    <Accordion titleValue = {'Меню'} collapsed = {true} />
     <Rating value = {3}/>
-    <Accordion title = {false}/>
+    <Accordion titleValue = {'Меню'} collapsed = {false}/>
     <Rating value = {4}/>
     </div>
   );
