@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
     <Accordion/>
-    <Rating />
-    <Rating />
+    <Rating value = {3}/>
+    <Rating value = {4}/>
     </div>
   );
 }
