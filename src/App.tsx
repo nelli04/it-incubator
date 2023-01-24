@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
     <PageTitle title = {'MyFriends'} />
-    <Accordion title = {'Меню'}/>
     <PageTitle title = {'TITLE'} />
+    <Accordion title = {'Меню'}/>
     <Rating value = {3}/>
     <Rating value = {4}/>
     </div>
