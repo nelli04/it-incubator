@@ -9,8 +9,15 @@ function App() {
     <Accordion/>
     <Rating value = {3}/>
     <Rating value = {4}/>
+    <PageTitle title = {'MyFriends'} />
+    <PageTitle title = {'TITLE'} />
     </div>
   );
+}
+
+function PageTitle(props: any) {
+  console.log('PageTitle rendering')
+  return <h1>props.title</h1>
 }
 
 export default App;
