@@ -9,7 +9,6 @@ type BossType = {
 }
 
 export const Button = (p: BossType) => {
-
     return (
         <div>
             <button onClick={p.onClick}>{p.title}</button>
