@@ -14,13 +14,21 @@ export const Counter = (p: BossType) => {
     return (
         <div className='count'>
             <div className={p.click === 5 ? 'red' : 'num'}>{p.click}</div>
-            <div className='btn'>
+            <div  className='btn'>
+              <div >
+                  <Button
+                      click={p.click}
+                      onClick={p.buttonInc}
+                      title='inc'
+                      class={p.click >= 5 ? 'ic' : 'inc'}
+                  />
+              </div>
 
                 <Button
                     click={p.click}
-                    onClick={p.buttonInc}
-                    title='inc'
-                    class={p.click >= 5 ? 'ic' : 'inc'}
+                    onClick={p.buttonReset}
+                    title='set'
+                    class={p.click >= 1 ? 'reset' : 'true_false'}
                 />
                 <Button
                     click={p.click}
@@ -28,14 +36,7 @@ export const Counter = (p: BossType) => {
                     title='reset'
                     class={p.click >= 1 ? 'reset' : 'true_false'}
                 />
-                <Button
-                    click={p.click}
-                    onClick={p.buttonReset}
-                    title='set'
-                    class={p.click >= 1 ? 'reset' : 'true_false'}
-                />
             </div>
-
         </div>
 
     );
