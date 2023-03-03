@@ -1,29 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Accordion from './components/Accordion/Accordion';
-import Rating from './components/Rating/Rating';
+import {Counter} from "./components/Counter/Counter";
+
+
 
 function App() {
-  debugger;
+
+  let [click, setClick] = useState(0)
+  const maxInc = 5;
+
+  const buttonInc = () => {
+    if (click === maxInc) {
+      return
+    } else {
+      setClick((count) => count + 1)
+    }
+  }
+  const buttonReset = () => {
+    setClick(0)
+  }
+
   return (
-    <div>
-    <PageTitle title = {'MyFriends'} />
-    <PageTitle title = {'TITLE'} />
-    <Accordion titleValue = {'Меню'} collapsed = {true} />
-    <Rating value = {3}/>
-    <Accordion titleValue = {'Меню'} collapsed = {false}/>
-    <Rating value = {4}/>
-    </div>
+      <div className='App'>
+        <div className='container'>
+          <Counter click={click}
+                   buttonReset={buttonReset}
+                   buttonInc={buttonInc}/>
+        </div>
+      </div>
   );
-}
-
-type PageTitlePropsType = {
-  title: string;
-}
-
-function PageTitle(props: PageTitlePropsType) {
-  console.log('PageTitle rendering')
-  return <h1>{props.title}</h1>
-}
+};
 
 export default App;
