@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-
 import {Counter} from "./components/Counter/Counter";
-
-
 
 function App() {
 
@@ -24,9 +21,11 @@ function App() {
   return (
       <div className='App'>
         <div className='container'>
-            <Counter click={click}
-                     buttonReset={buttonReset}
-                     buttonInc={buttonInc}/>
+
+                <Counter click={click}
+                         buttonReset={buttonReset}
+                         buttonInc={buttonInc}
+                />
         </div>
       </div>
   );
