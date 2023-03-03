@@ -15,15 +15,12 @@ export const Counter = (p: BossType) => {
         <div className='count'>
             <div className={p.click === 5 ? 'red' : 'num'}>{p.click}</div>
             <div  className='btn'>
-              <div >
-                  <Button
+                <Button
                       click={p.click}
                       onClick={p.buttonInc}
                       title='inc'
                       class={p.click >= 5 ? 'ic' : 'inc'}
                   />
-              </div>
-
                 <Button
                     click={p.click}
                     onClick={p.buttonReset}
