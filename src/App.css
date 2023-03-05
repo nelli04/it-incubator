@@ -163,12 +163,12 @@ div.red {
 
 
 
-/*.App {
+/*.App1 {
   padding: 30px;
   display: flex;
 }
 
-.App > div {
+.App1 > div {
   margin-right: 50px;
 }
 
