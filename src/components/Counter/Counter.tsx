@@ -6,36 +6,35 @@ type BossType = {
     buttonInc: () => void
     buttonReset: () => void
     click: number
+    class: string
 }
 
 
 export const Counter = (p: BossType) => {
 
     return (
-        <div className='count'>
-            <div className={p.click === 5 ? 'red' : 'num'}>{p.click}</div>
-            <div  className='btn'>
-                <Button
-                      click={p.click}
-                      onClick={p.buttonInc}
-                      title='inc'
-                      class={p.click >= 5 ? 'ic' : 'inc'}
-                  />
-                <Button
-                    click={p.click}
-                    onClick={p.buttonReset}
-                    title='set'
-                    class={p.click >= 1 ? 'reset' : 'true_false'}
-                />
-                <Button
-                    click={p.click}
-                    onClick={p.buttonReset}
-                    title='reset'
-                    class={p.click >= 1 ? 'reset' : 'true_false'}
-                />
-            </div>
-        </div>
-
+            <div className='count'>
+                <div className={p.click === 5 ? 'red' : 'num'}>{p.click}</div>
+                    <div  className='btn'>
+                        <Button
+                            click={p.click}
+                            onClick={p.buttonInc}
+                            title='inc'
+                            class={p.click >= 5 ? 'ic' : 'inc'}
+                        />
+                        <Button
+                            click={p.click}
+                            title='set'
+                            class={'set'}
+                        />
+                        <Button
+                            click={p.click}
+                            onClick={p.buttonReset}
+                            title='reset'
+                            class={p.click >= 1 ? 'reset' : 'true_false'}
+                        />
+                    </div>
+                </div>
     );
 }
 

@@ -5,13 +5,13 @@ type BossType = {
     class: string
     title: string
     click: number
-    onClick: () => void
+    onClick?: () => void
 }
 
 export const Button = (p: BossType) => {
     return (
         <div>
-            <button onClick={p.onClick}>{p.title}</button>
+            <button onClick={p.onClick} className={p.class}>{p.title}</button>
         </div>
     );
 };
