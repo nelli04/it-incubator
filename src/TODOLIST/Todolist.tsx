@@ -1,5 +1,6 @@
+
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
-import {FilterValuesType} from './App1';
+/*import {FilterValuesType} from './App1';
 
 export type TaskType = {
     id: string
@@ -98,3 +99,4 @@ export function Todolist(props: PropsType) {
         </div>
     </div>
 }
+*/
