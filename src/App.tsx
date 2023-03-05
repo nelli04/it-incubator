@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Counter} from "./components/Counter/Counter";
+import App1 from "./TODOLIST/App1";
 
 function App() {
 
@@ -19,7 +20,10 @@ function App() {
   }
 
   return (
-      <div className='App'>
+
+      <App1/>
+
+     /* <div className='App1'>
         <div className='container'>
 
                 <Counter click={click}
@@ -27,7 +31,7 @@ function App() {
                          buttonInc={buttonInc}
                 />
         </div>
-      </div>
+      </div>*/
   );
 };
 
