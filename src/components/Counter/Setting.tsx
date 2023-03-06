@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button} from "./Button";
 import { Navigate, NavLink, Route, Routes} from "react-router-dom";
+import styles from './Setting.module.css'
 
 export type SetType = {
     click: number
@@ -13,11 +14,18 @@ export const Setting = (p: SetType) => {
             <div>
                 <NavLink to={'/set'}>{<Button click={p.click} title='set' class={'set'}/>}</NavLink>
             </div>
-            <Routes>
-                <Route path={'/'} element={<Navigate to={'/'}/>}/>
-                <Route path={'/set'} element={'hello'}/>
-            </Routes>
+            <div>
+
+            </div>
 
         </div>
     );
 };
+
+
+
+
+// <Routes>
+//     <Route path={'/'} element={<Navigate to={'/*'}/>}/>
+//     {/*<Route path={'/set'} element={'hello'}/>*/}
+// </Routes>

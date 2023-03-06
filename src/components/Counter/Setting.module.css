@@ -1,0 +1,12 @@
+.cntnr {
+    display: grid;
+    place-items: center;
+    height: 753px;
+    background-color: dimgrey;
+}
+
+.count {
+    border: 4px solid white;
+    width: 400px;
+    height: 400px;
+}
