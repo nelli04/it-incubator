@@ -21,16 +21,16 @@ function App() {
 
   return (
 
-     /* <App1/>*/
+      <App1/>
 
-      <div className='App1'>
-        <div className='container'>
-            <Counter click={click}
-                     buttonReset={buttonReset}
-                     buttonInc={buttonInc}
-            />
-        </div>
-      </div>
+      // <div className='App1'>
+      //   <div className='container'>
+      //       <Counter click={click}
+      //                buttonReset={buttonReset}
+      //                buttonInc={buttonInc}
+      //       />
+      //   </div>
+      // </div>
   );
 };
 
