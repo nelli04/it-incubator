@@ -1,12 +1,12 @@
 import React from 'react';
 import {Button} from "./Button";
+import {Setting} from "./Setting";
 
 
 type BossType = {
     buttonInc: () => void
     buttonReset: () => void
     click: number
-    class: string
 }
 
 
@@ -22,11 +22,7 @@ export const Counter = (p: BossType) => {
                             title='inc'
                             class={p.click >= 5 ? 'ic' : 'inc'}
                         />
-                        <Button
-                            click={p.click}
-                            title='set'
-                            class={'set'}
-                        />
+                       <Setting click={p.click}/>
                         <Button
                             click={p.click}
                             onClick={p.buttonReset}
