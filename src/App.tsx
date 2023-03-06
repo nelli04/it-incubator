@@ -28,7 +28,6 @@ function App() {
             <Counter click={click}
                      buttonReset={buttonReset}
                      buttonInc={buttonInc}
-                     class={''}
             />
         </div>
       </div>
