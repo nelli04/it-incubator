@@ -20,7 +20,6 @@ function App() {
   }
 
   return (
-
       <App1/>
 
       // <div className='App1'>
