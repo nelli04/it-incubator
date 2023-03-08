@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {Counter} from "./components/Counter/Counter";
 import App1 from "./TODOLIST/App1";
-import App2 from "./TODOLIST/src/App2";
+
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-      <App2/>
+      <App1/>
 
       // <div className='App1'>
       //   <div className='container'>
