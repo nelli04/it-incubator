@@ -26,19 +26,19 @@ function App() {
     return (
         // <App1/>
 
-
-        <div className='App1'>
+        <div>
             <Routes>
                 <Route path={'/set'} element={<Setting click={click}/>}/>
             </Routes>
-            <div className='container'>
-                <Counter click={click}
-                         buttonReset={buttonReset}
-                         buttonInc={buttonInc}
-                />
+            <div className='App1'>
+                <div className='container'>
+                    <Counter click={click}
+                             buttonReset={buttonReset}
+                             buttonInc={buttonInc}
+                    />
+                </div>
             </div>
         </div>
-
     );
 };
 
