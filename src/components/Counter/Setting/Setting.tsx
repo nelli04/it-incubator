@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button} from "../Button";
 import {NavLink} from "react-router-dom";
+import s from './Setting.module.css'
 import {Arrow} from "../Arrow/Arrow";
 
 export type SetType = {
@@ -10,14 +10,16 @@ export type SetType = {
 export const Setting = (p: SetType) => {
     debugger;
     return (
-        <div>
-            <div>
-                <NavLink to={'/set'}><Button
-                    click={p.click}
-                    title='set'
-                    class={'set'}
-                /></NavLink>
-
+        <div className={s.cntnr}>
+            <div className={s.count}>
+                <Arrow/>
+                <NavLink to={'/set'}></NavLink>
+                <div className={s.ipt}>
+                    <div className={s.input}>
+                        <input type='number'/>
+                        <input type='number'/>
+                    </div>
+                </div>
             </div>
         </div>
     );

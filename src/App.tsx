@@ -4,6 +4,7 @@ import {Counter} from "./components/Counter/Counter";
 import App1 from "./TODOLIST/App1";
 import {Arrow} from "./components/Counter/Arrow/Arrow";
 import {Setting} from "./components/Counter/Setting/Setting";
+import {Route, Routes} from "react-router-dom";
 
 
 function App() {
@@ -27,9 +28,10 @@ function App() {
 
 
         <div className='App1'>
-
+            <Routes>
+                <Route path={'/set'} element={<Setting click={click}/>}/>
+            </Routes>
             <div className='container'>
-                <Arrow/>
                 <Counter click={click}
                          buttonReset={buttonReset}
                          buttonInc={buttonInc}

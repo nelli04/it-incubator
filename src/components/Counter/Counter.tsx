@@ -21,10 +21,11 @@ export const Counter = (p: BossType) => {
                             title='inc'
                             class={p.click >= 5 ? 'ic' : 'inc'}
                         />
-                        <Navigate to={'/'}/>
-                        <Routes>
-                            <Route path={'/set'} element={<Setting click={p.click}/>}/>
-                        </Routes>
+                        <Button
+                            click={p.click}
+                            title='set'
+                            class={'set'}
+                        />
                         <Button
                             click={p.click}
                             onClick={p.buttonReset}
