@@ -90,7 +90,7 @@ function App(): JSX.Element {
             case "active":
                 return tasks.filter(t => t.isDone === false)
             case "completed":
-                return tasks.filter(t => t.isDone === true)
+                return tasks.filter(t => t.isDone)
             default:
                 return tasks
         }

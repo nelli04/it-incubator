@@ -1,4 +1,4 @@
-import React, {ChangeEvent, FC, RefObject, useRef, useState, KeyboardEvent} from 'react';
+import React, { FC} from 'react';
 import TasksList from "./TasksList";
 import {FilterValuesType} from "./App1";
 import {InputTodolist} from "./InputTodolist";
@@ -37,7 +37,8 @@ const TodoList: FC<TodoListPropsType> = (props) => {
 
     return (
         <div className={"todolist"}>
-            <h3><InputTitle newTitles={props.title} changeTitle={()=>{}}/>
+            <h3>
+                <InputTitle newTitles={props.title} changeTitle={()=>{}}/>
                 <button onClick={removeTodoList}>x</button>
             </h3>
             <InputTodolist maxLengthUserMessages={15} addTasks={addTask}/>
