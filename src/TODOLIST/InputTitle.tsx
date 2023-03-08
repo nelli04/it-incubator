@@ -35,7 +35,9 @@ export const InputTitle: FC<InputTitleType> = (
                      onChange={changeLocalTitle}
                      onBlur={offEditMode}
                      autoFocus/>
-            : <span className={spanClasses}>{newTitles}</span>
+            : <span className={spanClasses}
+                    onDoubleClick={onEditMode}
+            >{newTitles}</span>
     );
 };
 

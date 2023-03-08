@@ -6,21 +6,22 @@ type InputTodolistProps = {
 }
 
 export const InputTodolist: FC<InputTodolistProps> = ({
-  maxLengthUserMessages,
+  //maxLengthUserMessages,
   addTasks,
 }) => {
     const [title, setTitle] = useState<string>("")
     const [error, setError] = useState<boolean>(false)
 
-    const isAddBtnDisabled = !title.length
     const maxLengthUserMessage: number = 15
     const isUserMessageToLong: boolean = title.length > maxLengthUserMessage
+    const isAddBtnDisabled = !title.length || isUserMessageToLong || error
     const userMaxLengthMessage = isUserMessageToLong && <div style={{color: "hotpink"}}>Task title is to long!</div>
 
     const changeLocalTitle = (e: ChangeEvent<HTMLInputElement>) => {
         error && setError(false)
         setTitle(e.currentTarget.value)
     }
+
     const addTask = () => {
         if (title.trim()) {
             addTasks(title.trim())
@@ -30,9 +31,12 @@ export const InputTodolist: FC<InputTodolistProps> = ({
         setTitle("")
     }
 
-    const onKeyDownHandler = () => {
+    const onKeyDownAddItem = (e: KeyboardEvent<HTMLInputElement>) => {
+        e.key === 'Enter' && addTask()
     }
-    const onKeyDownAddTask = (e: KeyboardEvent<HTMLInputElement>) => e.key === "Enter" && addTask()
+
+    const onKeyDownHandler = isAddBtnDisabled ? undefined : onKeyDownAddItem
+    //const onKeyDownAddTask = (e: KeyboardEvent<HTMLInputElement>) => e.key === "Enter" && addTask()
     const inputErrorClasses = error || isUserMessageToLong ? "input-error" : ""
     const userErrorMessage = error && <div style={{color: "hotpink"}}>Title is required!</div>
 
@@ -42,7 +46,7 @@ export const InputTodolist: FC<InputTodolistProps> = ({
                 value={title}
                 placeholder="Please, enter title"
                 onChange={changeLocalTitle}
-                onKeyDown={onKeyDownAddTask}
+                onKeyDown={onKeyDownHandler}
                 className={inputErrorClasses}
             />
 
