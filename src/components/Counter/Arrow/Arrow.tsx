@@ -6,8 +6,8 @@ export const Arrow = () => {
         <div className={s.arrow}>
             <div className={s.left}>
                 <button className={s.btn}>
-                    <svg width="60px"
-                         height="80px"
+                    <svg width="40px"
+                         height="60px"
                          viewBox="0 0 50 80">
                         <polyline fill="none"
                                   stroke="#FFFFFF"

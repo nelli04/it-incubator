@@ -3,7 +3,7 @@
     place-items: center;
     height: 753px;
     background-color: dimgrey;
-
+    /*justify-content: center;*/
 }
 
 .count {
@@ -14,8 +14,8 @@
 
 .input {
     margin-left: 73px;
-    margin-top: 29px;
-
+    margin-top: 20px;
+    bottom: 200px;
 }
 
 .ipt {
@@ -23,5 +23,53 @@
     width: 305px;
     height: 105px;
     margin-left: 50px;
-    margin-top: 130px;
+    margin-top: 120px;
+    background-color: darkgrey;
+}
+
+.inpt {
+    border: 2px solid white;
+    width: 305px;
+    height: 105px;
+    margin-left: 50px;
+    margin-top: 30px;
+
+}
+
+.save button{
+    background-color: aqua;
+    color: #ffffff;
+    width: 150px;
+    height: 50px;
+    margin-left: 79px;
+    margin-top: 29px;
+    border-radius: 5px;
+    border: none;
+}
+
+button.save:hover {
+    opacity: 0.8;
+    background-color: aqua;
+    color: #ffffff;
+    width: 150px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.up {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 110px;
+    gap: 10px;
+}
+
+.down {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 110px;
+    margin-bottom: 130px;
 }
