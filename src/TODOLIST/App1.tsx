@@ -20,7 +20,7 @@ type TasksStateType = {
 
 type TodoListsStateType = Array<TodoListType>
 
-function App(): JSX.Element {
+function App1(): JSX.Element {
     //BLL:
     const todoListId_1 = v1()
     const todoListId_2 = v1()
@@ -56,11 +56,14 @@ function App(): JSX.Element {
             title: title,
             isDone: false
         }
-        const tasksForUpdate: Array<TaskType> = tasks[todoListId] // 3 tasks
-        const updatedTasks = [newTask, ...tasksForUpdate]  // 4 tasks
-        const copyTasks = {...tasks}
-        copyTasks[todoListId] = updatedTasks
-        setTasks(copyTasks)
+
+
+
+        // const tasksForUpdate: Array<TaskType> = tasks[todoListId] // 3 tasks
+        // const updatedTasks = [newTask, ...tasksForUpdate]  // 4 tasks
+        // const copyTasks = {...tasks}
+        // copyTasks[todoListId] = updatedTasks
+        // setTasks(copyTasks)
         //
         setTasks({...tasks, [todoListId]: [newTask, ...tasks[todoListId]]})
     }
@@ -143,4 +146,4 @@ function App(): JSX.Element {
     );
 }
 
-export default App;
+export default App1;
