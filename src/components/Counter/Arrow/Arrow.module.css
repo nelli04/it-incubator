@@ -1,0 +1,36 @@
+.btn {
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    outline:0;
+    color: black;
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -165px;
+    margin-right: 330px;
+    width: 70px;
+    height: 90px;
+
+}
+
+.left {
+    left: 42%;
+}
+
+.left:hover polyline,
+.left:focus polyline {
+    stroke-width: 3;
+}
+
+.left:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+polyline {
+    transition: all 250ms ease-in-out;
+}

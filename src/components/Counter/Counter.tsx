@@ -1,14 +1,13 @@
 import React from 'react';
 import {Button} from "./Button";
-import {Setting} from "./Setting";
-
+import {Setting} from "./Setting/Setting";
+import {Routes, Route, Navigate} from "react-router-dom";
 
 type BossType = {
     buttonInc: () => void
     buttonReset: () => void
     click: number
 }
-
 
 export const Counter = (p: BossType) => {
 
@@ -22,7 +21,10 @@ export const Counter = (p: BossType) => {
                             title='inc'
                             class={p.click >= 5 ? 'ic' : 'inc'}
                         />
-                       <Setting click={p.click}/>
+                        <Navigate to={'/'}/>
+                        <Routes>
+                            <Route path={'/set'} element={<Setting click={p.click}/>}/>
+                        </Routes>
                         <Button
                             click={p.click}
                             onClick={p.buttonReset}
@@ -33,6 +35,20 @@ export const Counter = (p: BossType) => {
                 </div>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*buttonInc={p.buttonInc}*/ /*buttonReset={p.buttonReset}*/

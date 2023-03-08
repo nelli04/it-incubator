@@ -1,7 +1,7 @@
 import React from 'react';
-import {Button} from "./Button";
-import { Navigate, NavLink, Route, Routes} from "react-router-dom";
-import styles from './Setting.module.css'
+import {Button} from "../Button";
+import {NavLink} from "react-router-dom";
+import {Arrow} from "../Arrow/Arrow";
 
 export type SetType = {
     click: number
@@ -12,17 +12,16 @@ export const Setting = (p: SetType) => {
     return (
         <div>
             <div>
-                <NavLink to={'/set'}>{<Button click={p.click} title='set' class={'set'}/>}</NavLink>
-            </div>
-            <div>
+                <NavLink to={'/set'}><Button
+                    click={p.click}
+                    title='set'
+                    class={'set'}
+                /></NavLink>
 
             </div>
-
         </div>
     );
 };
-
-
 
 
 // <Routes>
