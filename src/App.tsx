@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Counter} from "./components/Counter/Counter";
-import App1 from "./TODOLIST/App1";
-import {Arrow} from "./components/Counter/Arrow/Arrow";
 import {Setting} from "./components/Counter/Setting/Setting";
-import {Route, Routes} from "react-router-dom";
+import {NavLink, Route, Routes} from "react-router-dom";
+import {Button} from "./components/Counter/Button";
 
 
 function App() {
@@ -27,9 +26,12 @@ function App() {
         // <App1/>
 
         <div>
-            <Routes>
-                <Route path={'/set'} element={<Setting click={click}/>}/>
-            </Routes>
+            <div>
+                <Routes>
+                    <Route path={'/boss'} element={<Button click={click} title={''} onClick={()=>{}} class={''}/>}/>
+                    <Route path={'/set'} element={<Setting click={click}/>}/>
+                </Routes>
+            </div>
             <div className='App1'>
                 <div className='container'>
                     <Counter click={click}
@@ -40,6 +42,6 @@ function App() {
             </div>
         </div>
     );
-};
+}
 
 export default App;

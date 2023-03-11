@@ -1,37 +1,40 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
 import s from './Setting.module.css'
 import {Arrow} from "../Arrow/Arrow";
 import {Button} from "../Button";
+import {NavLink} from "react-router-dom";
 
 export type SetType = {
     click: number
 }
 
 export const Setting = (p: SetType) => {
-    debugger;
     return (
-        <div className={s.cntnr}>
-            <div className={s.count}>
-                <Arrow/>
-                <NavLink to={'/set'}></NavLink>
-                <div className={s.ipt}>
-                    <div className={s.input}>
-                        <input type='number' className={s.up}/>
-                        <input type='number' className={s.down}/>
+            <div className={s.cntnr}>
+                <div className={s.count}>
+                    <NavLink to={'/boss/count'}><Arrow/></NavLink>
+                    <div className={s.ipt}>
+
+                        <div className={s.input}>
+                            <div>
+                                <input type='number' className={s.up}/>
+                            </div>
+                            <div>
+                                <input type='number' className={s.down}/>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className={s.inpt}>
-                    <div className={s.save}>
-                        <Button
-                            click={p.click}
-                            title='save'
-                            class={'set'}
-                        />
+                    <div className={s.inpt}>
+                        <div className={s.save}>
+                            <Button
+                                click={p.click}
+                                title='save'
+                                class=''
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 
