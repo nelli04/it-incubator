@@ -4,6 +4,7 @@ import {Counter} from "./components/Counter/Counter";
 import {Setting} from "./components/Counter/Setting/Setting";
 import {NavLink, Route, Routes} from "react-router-dom";
 import {Button} from "./components/Counter/Button";
+import App2 from "./TODOLIST/src/App2";
 
 
 function App() {
@@ -25,22 +26,24 @@ function App() {
     return (
         // <App1/>
 
-        <div>
-            <div>
-                <Routes>
-                    <Route path={'/boss'} element={<Button click={click} title={''} onClick={()=>{}} class={''}/>}/>
-                    <Route path={'/set'} element={<Setting click={click}/>}/>
-                </Routes>
-            </div>
-            <div className='App1'>
-                <div className='container'>
-                    <Counter click={click}
-                             buttonReset={buttonReset}
-                             buttonInc={buttonInc}
-                    />
-                </div>
-            </div>
-        </div>
+        <App2/>
+
+        // <div>
+        //     <div>
+        //         <Routes>
+        //             <Route path={'/boss'} element={<Button click={click} title={''} onClick={()=>{}} class={''}/>}/>
+        //             <Route path={'/set'} element={<Setting click={click}/>}/>
+        //         </Routes>
+        //     </div>
+        //     <div className='App1'>
+        //         <div className='container'>
+        //             <Counter click={click}
+        //                      buttonReset={buttonReset}
+        //                      buttonInc={buttonInc}
+        //             />
+        //         </div>
+        //     </div>
+        // </div>
     );
 }
 
