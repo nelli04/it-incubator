@@ -8,9 +8,33 @@ import {action} from "@storybook/addon-actions";
 
 export default {
     title: 'input',
-    //component: Accordion,
+    component: Accordion,
 }
 
+const callback = action('accordion change')
+const callback1 = action('accordion click change')
+
+export const Accordions = () => <Accordion titleValue={'Menu'}
+                                           collapsed={true}
+                                           onChange={callback}
+                                           items={[]}
+                                           onClick={callback}
+/>
+export const Accordions2 = () => <Accordion titleValue={'Users'}
+                                            collapsed={false}
+                                            onChange={callback}
+                                            items={[{title: 'A', value: 1}, {title: 'B', value: 2}, {title: "C", value: 3}]}
+                                            onClick={callback1}
+/>
+
+export const Accordions3 = () => {
+    const [value, setValue] = useState(true)
+    return <Accordion titleValue={'Users'} collapsed={value}
+                      onChange={()=>setValue(!value)}
+                      items={[{title: 'A', value: 1}, {title: 'B', value: 2}, {title: "C", value: 3}]}
+                      onClick={callback1}
+    />
+}
 
 
 
