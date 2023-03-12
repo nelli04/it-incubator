@@ -64,7 +64,6 @@ function App1(): JSX.Element {
         const copyTasks = {...tasks}
         copyTasks[todoListId] = updatedTasks
         setTasks(copyTasks)
-        //
         setTasks({...tasks, [todoListId]: tasks[todoListId].map(t => t.id === taskId ? {...t, isDone: newIsDone} : t)})
     }
 
