@@ -23,6 +23,14 @@ function App() {
         setClick(0)
     }
 
+    const numbers = [1, 2, 3, 4]
+
+    numbers.forEach((num) => {
+        const square = num * num
+        console.log('Квадрат числа равен: ' + square)
+    })
+
+
     return (
          <App1/>
 
