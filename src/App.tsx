@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Counter} from "./components/Counter/Counter";
 import {Setting} from "./components/Counter/Setting/Setting";
 import {NavLink, Route, Routes} from "react-router-dom";
 import {Button} from "./components/Counter/Button";
-import App2 from "./TODOLIST/src/src/App2";
+import App1 from "./TODOLIST/App1";
 
 
 function App() {
@@ -24,9 +24,7 @@ function App() {
     }
 
     return (
-        // <App1/>
-
-        <App2/>
+         <App1/>
 
         // <div>
         //     <div>
