@@ -59,11 +59,6 @@ function App1(): JSX.Element {
         setTasks({...tasks, [todoListId]: [newTask, ...tasks[todoListId]]})
     }
     const changeTaskStatus = (taskId: string, newIsDone: boolean, todoListId: string) => {
-        const tasksForUpdate: Array<TaskType> = tasks[todoListId]
-        const updatedTasks = tasksForUpdate.map(t => t.id === taskId ? {...t, isDone: newIsDone} : t)
-        const copyTasks = {...tasks}
-        copyTasks[todoListId] = updatedTasks
-        setTasks(copyTasks)
         setTasks({...tasks, [todoListId]: tasks[todoListId].map(t => t.id === taskId ? {...t, isDone: newIsDone} : t)})
     }
 
