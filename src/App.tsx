@@ -4,7 +4,7 @@ import {Counter} from "./components/Counter/Counter";
 import {Setting} from "./components/Counter/Setting/Setting";
 import {NavLink, Route, Routes} from "react-router-dom";
 import {Button} from "./components/Counter/Button";
-import App2 from "./TODOLIST/src/App2";
+import App2 from "./TODOLIST/src/src/App2";
 
 
 function App() {
