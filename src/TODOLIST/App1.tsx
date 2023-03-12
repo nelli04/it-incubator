@@ -56,15 +56,6 @@ function App1(): JSX.Element {
             title: title,
             isDone: false
         }
-
-
-
-        // const tasksForUpdate: Array<TaskType> = tasks[todoListId] // 3 tasks
-        // const updatedTasks = [newTask, ...tasksForUpdate]  // 4 tasks
-        // const copyTasks = {...tasks}
-        // copyTasks[todoListId] = updatedTasks
-        // setTasks(copyTasks)
-        //
         setTasks({...tasks, [todoListId]: [newTask, ...tasks[todoListId]]})
     }
     const changeTaskStatus = (taskId: string, newIsDone: boolean, todoListId: string) => {
