@@ -1,4 +1,5 @@
 import React, {ChangeEvent, FC, useState} from 'react';
+import {TextField} from "@mui/material";
 
 type InputTitleType = {
     newTitles: string
@@ -31,7 +32,7 @@ export const InputTitle: FC<InputTitleType> = (
 
     return (
         editMode
-            ? <input value={title}
+            ? <TextField value={title}
                      onChange={changeLocalTitle}
                      onBlur={offEditMode}
                      autoFocus/>
