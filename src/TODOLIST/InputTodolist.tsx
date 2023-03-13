@@ -21,7 +21,6 @@ export const InputTodolist: FC<InputTodolistProps> = ({
         error && setError(false)
         setTitle(e.currentTarget.value)
     }
-
     const addTask = () => {
         if (title.trim()) {
             addTasks(title.trim())
@@ -30,13 +29,11 @@ export const InputTodolist: FC<InputTodolistProps> = ({
         }
         setTitle("")
     }
-
     const onKeyDownAddItem = (e: KeyboardEvent<HTMLInputElement>) => {
         e.key === 'Enter' && addTask()
     }
-
     const onKeyDownHandler = isAddBtnDisabled ? undefined : onKeyDownAddItem
-    //const onKeyDownAddTask = (e: KeyboardEvent<HTMLInputElement>) => e.key === "Enter" && addTask()
+
     const inputErrorClasses = error || isUserMessageToLong ? "input-error" : ""
     const userErrorMessage = error && <div style={{color: "hotpink"}}>Title is required!</div>
 
