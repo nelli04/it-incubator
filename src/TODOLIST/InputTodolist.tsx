@@ -1,4 +1,6 @@
 import React, {ChangeEvent, FC, KeyboardEvent, useState} from 'react';
+import {Button} from "@mui/material";
+import TextField from '@mui/material/TextField';
 
 type InputTodolistProps = {
     maxLengthUserMessages: number
@@ -39,15 +41,22 @@ export const InputTodolist: FC<InputTodolistProps> = ({
 
     return (
         <div>
-            <input
+            <TextField
                 value={title}
-                placeholder="Please, enter title"
+                //placeholder="Please, enter title"
                 onChange={changeLocalTitle}
                 onKeyDown={onKeyDownHandler}
-                className={inputErrorClasses}
+                //className={inputErrorClasses}
+                variant={"standard"}
+                label={'type value'}
+                error={!!error}
+                helperText={error}
             />
 
-            <button disabled={isAddBtnDisabled} onClick={addTask}>+</button>
+            <Button disabled={isAddBtnDisabled}
+                    onClick={addTask}
+                    variant={"contained"}
+                    color={'primary'}>+</Button>
             {userMaxLengthMessage}
             {userErrorMessage}
         </div>
