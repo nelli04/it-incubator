@@ -6,7 +6,7 @@ type InputTodolistProps = {
 }
 
 export const InputTodolist: FC<InputTodolistProps> = ({
-  //maxLengthUserMessages,
+
   addTasks,
 }) => {
     const [title, setTitle] = useState<string>("")
