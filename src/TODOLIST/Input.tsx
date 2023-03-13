@@ -44,5 +44,9 @@ export const Input = (props: InputType) => {
     );
 };
 
-
-
+// "eslintConfig": {
+//     "extends": [
+//         "react-app",
+//         "react-app/jest"
+//     ],
+//
