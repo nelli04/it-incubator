@@ -1,6 +1,8 @@
 import React, {ChangeEvent, FC} from 'react';
 import {TaskType} from "./TodoList";
 import {InputTitle} from "./InputTitle";
+import {Checkbox, IconButton, TextField} from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 type TasksListPropsType = {
     todoListId: string
@@ -24,14 +26,16 @@ const TasksList: FC<TasksListPropsType> = (props): JSX.Element => {
             }
             return (
                 <li key={task.id}>
-                    <input
-                        type="checkbox"
+                    <Checkbox
+                        //type="checkbox"
                         checked={task.isDone}
                         onChange={changeTaskStatusHandler}
                     />
                     <span className={taskClasses}></span>
                     <InputTitle newTitles={task.title} spanClasses={taskClasses} changeTitle={changeTodolistTitleHandler}/>
-                    <button onClick={removeTaskHandler}>x</button>
+                    <IconButton onClick={removeTaskHandler}>
+                        <DeleteIcon />
+                    </IconButton>
                 </li>
             )
         })
