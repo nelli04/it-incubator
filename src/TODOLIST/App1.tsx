@@ -70,8 +70,8 @@ function App1(): JSX.Element {
         const copyTasks = {...tasks}
         delete copyTasks[todoListId]
         setTasks(copyTasks)
-    }
 
+    }
     const getFilteredTasks = (tasks: Array<TaskType>, filter: FilterValuesType): Array<TaskType> => {
         switch (filter) {
             case "active":
@@ -92,16 +92,17 @@ function App1(): JSX.Element {
         setTodoLists([...todoLists, newTodolist])
         setTasks({...tasks, [newTodolistId]: []})
     }
+
     const changeTaskTitle = (taskId: string, todoListId: string, newTitle: string) => {
         setTasks({...tasks, [todoListId]: tasks[todoListId].map(t => t.id === taskId ? {...t, newTitle: newTitle} : t)})
     }
+
     const changeTodolistTitle = (title: string, todoListId: string) => {
         setTodoLists(todoLists.map(tl => tl.id === todoListId ? {...tl, title: title} : tl))
     }
 
     const todoListsComponents = todoLists.map(tl => {
-        const filteredTasks: Array<TaskType> = getFilteredTasks(tasks[tl.id], tl
-            .filter)
+        const filteredTasks: Array<TaskType> = getFilteredTasks(tasks[tl.id], tl.filter) // ?
         return (
             <TodoList
                 key={tl.id}

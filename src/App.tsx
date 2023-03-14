@@ -32,7 +32,7 @@ function App() {
 
 
     return (
-         <App1/>
+        <App1/>
 
         // <div>
         //     <div>

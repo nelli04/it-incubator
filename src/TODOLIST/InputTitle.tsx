@@ -32,13 +32,14 @@ export const InputTitle: FC<InputTitleType> = (
 
     return (
         editMode
-            ? <TextField value={title}
+            ? <TextField
+                value={title}
                      onChange={changeLocalTitle}
                      onBlur={offEditMode}
                      autoFocus/>
             : <span className={spanClasses}
                     onDoubleClick={onEditMode}
-            >{newTitles}</span>
+            >{title}</span>
     );
 };
 
