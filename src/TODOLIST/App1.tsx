@@ -92,11 +92,9 @@ function App1(): JSX.Element {
         setTodoLists([...todoLists, newTodolist])
         setTasks({...tasks, [newTodolistId]: []})
     }
-
     const changeTaskTitle = (taskId: string, todoListId: string, newTitle: string) => {
         setTasks({...tasks, [todoListId]: tasks[todoListId].map(t => t.id === taskId ? {...t, newTitle: newTitle} : t)})
     }
-
     const changeTodolistTitle = (title: string, todoListId: string) => {
         setTodoLists(todoLists.map(tl => tl.id === todoListId ? {...tl, title: title} : tl))
     }
